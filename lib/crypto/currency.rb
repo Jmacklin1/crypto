@@ -1,11 +1,17 @@
 class Currency
 
-attr_accessor :time, :usd, :gbr, :eur, :rate
+attr_accessor :time, :code, :rate, :description
  @@all = []
-def initialize(time, currency, rate)
-    @time = time
-    @currency = currency
-    @rate = rate
+def initialize(curency_hash)  #(time, code, rate, description)
+    currency_hash.each do |key, value|
+        self.send("#{key}=", value)
+        if self.respond_to?("#key)=")
+    end
+    
+    #@time = time
+    #@currency = currency
+    #@rate = rate
+    #@desription = description
     save
 end
 
@@ -16,9 +22,5 @@ def self.all
     @@all
 end
 
-
-
-    
-
-
+end
 end
