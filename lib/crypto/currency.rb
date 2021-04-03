@@ -1,26 +1,27 @@
 class Currency
 
-attr_accessor :time, :code, :rate, :description
+attr_accessor :code, :rate, :description
  @@all = []
-def initialize(curency_hash)  #(time, code, rate, description)
-    currency_hash.each do |key, value|
-        self.send("#{key}=", value)
-        if self.respond_to?("#key)=")
-    end
-    
+ 
+    def initialize(currency_array)           #(time, code, rate, description) 
+   #binding.pry
+    currency_array.each do |key, value|
+        self.send("#{key}=", value) if self.respond_to?("#{key}=")
+            #binding.pry
+        end
+    binding.pry
     #@time = time
     #@currency = currency
     #@rate = rate
     #@desription = description
-    save
-end
+            save
+    end
 
-def save
+    def save
     @all << self
 end
-def self.all
+    def self.all
     @@all
 end
 
-end
 end
