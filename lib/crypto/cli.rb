@@ -45,7 +45,7 @@ class CLI
     def print_currencies
            Currency.all.each.with_index(1) do |currency, index |
             #binding.pry 
-                puts "#{index}. #{currency.name}"
+                puts "#{index}. #{currency.code}"
             #binding.pry
         end
         select_currencies
