@@ -43,12 +43,14 @@ class CLI
             menu
         end
     def print_currencies
-           Currency.all.with_index(1) do |index, currency|
-                puts "#{index}.#{currency}"
-            binding.pry 
+           Currency.all.each.with_index(1) do |currency, index |
+            #binding.pry 
+                puts "#{index}. #{currency.name}"
+            #binding.pry
         end
         select_currencies
     end
+
     def select_currencies
         puts "please enter the currency you would to learn the crypto exchange for "
         selection = user_input

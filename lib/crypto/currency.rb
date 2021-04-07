@@ -5,11 +5,11 @@ attr_accessor :code, :rate, :description
 
     def initialize(currency_array)           #(time, code, rate, description) 
    #binding.pry
-    currency_array.each  {|key, value|
+    currency_array[1].each  {|key, value|
         self.send("#{key}=", value) if self.respond_to?("#{key}=")}
             #binding.pry
-        end
-        
+        #end
+        save
     end
 
 def save
@@ -19,6 +19,8 @@ end
     def self.all
     @@all
     
+end
+
 end
 
 
