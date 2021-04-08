@@ -20,6 +20,12 @@ end
     @@all
     
 end
+def self.find_by_selection(currency_code)
+    self.all.detect  do |currency|
+        currency.code == currency_code
+    end
+
+end
 
 end
 

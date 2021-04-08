@@ -54,12 +54,17 @@ class CLI
     def select_currencies
         puts "please enter the currency you would to learn the crypto exchange for "
         selection = user_input
-        currency_details(selection)
-        puts "currency rate"
+        currency = Currency.find_by_selection(selection)
+        puts "input y to see a list or exit to leave"
+        currency_details(currency)
+        #puts "urrency rate"
         
     end
     def currency_details(currency)
-        puts "#{currency}"
+        puts "Name: #{currency.code}"
+        puts "Description: #{currency.description}"
+        puts "Rate: #{currency.rate}"
+        menu 
         
     end
 end
