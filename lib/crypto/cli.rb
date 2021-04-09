@@ -11,7 +11,7 @@ class CLI
 
     def greet(name)
         puts "Greeting #{name}
-        would you like to check the price of our Cryptos? Select y to continue or exit to exit"
+        would you like to check the price for Bitcoin? Select y to continue or exit to exit"
         #binding.pry
         menu
     end
@@ -53,7 +53,7 @@ class CLI
     end
 
     def select_currencies
-        puts "please enter the currency you would to learn the crypto exchange for "
+        puts "Please enter the currency you would to learn the exchange ratefor "
         selection = user_input
         if Currency.find_by_selection(selection)
             currency = Currency.find_by_selection(selection)
@@ -72,17 +72,21 @@ class CLI
         if currency == "exit"
             goodbye
         elsif currency.class == Currency
-      
+        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        
         puts "Name: #{currency.code}"
         puts "Description: #{currency.description}"
         puts "Rate: #{currency.rate}"
-            
-        puts "Would you like to check more Cryptos? Select y to continue or exit to exit"
+         
+        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        
+        puts "Would you like to check the price of Bitcoin? Select y to continue or exit to exit"
         menu
 
         else 
             invalid
-        puts "would you like to check the price of our Cryptos? Select y to continue or exit to exit"
+        puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        puts "Would you like to check the price of Bitcoin? Select y to continue or exit to exit"
         menu 
        
         end
