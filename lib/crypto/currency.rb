@@ -21,8 +21,10 @@ end
     
 end
 def self.find_by_selection(currency_code)
+   
     self.all.detect  do |currency|
-        currency.code == currency_code
+        #binding.pry
+        currency.code.downcase == currency_code.downcase
     end
 
 end

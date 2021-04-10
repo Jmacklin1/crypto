@@ -21,12 +21,12 @@ class CLI
         #enter exit = exit
         # else invalid
         #binding.pry
-        if selection == "y"
+        if selection.downcase == "y"
             #continue
             print_currencies
             #menu
             # binding.pry
-        elsif selection == "exit"
+        elsif selection.downcase == "exit"
             goodbye
             #exit
         else
@@ -53,7 +53,7 @@ class CLI
     end
 
     def select_currencies
-        puts "Please enter the currency you would to learn the exchange ratefor "
+        puts "Please enter the currency you would to learn the exchange rate for "
         selection = user_input
         if Currency.find_by_selection(selection)
             currency = Currency.find_by_selection(selection)
@@ -69,9 +69,9 @@ class CLI
     end
     def currency_details(currency)
         #binding.pry
-        if currency == "exit"
-            goodbye
-        elsif currency.class == Currency
+        
+        if currency.class == Currency
+            
         puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
         
         puts "Name: #{currency.code}"
@@ -82,7 +82,8 @@ class CLI
         
         puts "Would you like to check the price of Bitcoin? Select y to continue or exit to exit"
         menu
-
+        elsif currency.class == String && currency.downcase == "exit" 
+            goodbye
         else 
             invalid
         puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
