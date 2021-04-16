@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-To start execute bin/run 
+To start execute ruby bin/run 
 After the welcome message, you will be asked to enter your name.
 The program will then ask if you would like to check the price of Bitcoin. You will be prompted to select continue or exit.
 Continuing- you will be prompted to select the currency you would like to know the exchange rate for.

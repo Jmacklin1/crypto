@@ -12,27 +12,23 @@ class CLI
     def greet(name)
         puts "Greetings #{name},
         would you like to check the price for Bitcoin? Select continue to continue or exit to exit"
-        #binding.pry
+        
         menu
     end
     def menu
         selection = user_input
-        # enter y print out a list of currencies to choose
-        #enter exit = exit
-        # else invalid
-        #binding.pry
+
         if selection.downcase == "continue"
-            #continue
+            
             print_currencies
-            #menu
-            # binding.pry
+            
         elsif selection.downcase == "exit"
             goodbye
-            #exit
+            
         else
             invalid
             menu 
-            #invalid
+            
             
         end
     end
@@ -41,13 +37,13 @@ class CLI
         end
     def invalid
             puts " Lets try that again somethings not looking right"
-            #menu
+            
         end
     def print_currencies
            Currency.all.each.with_index(1) do |currency, index |
-            #binding.pry 
+            
                 puts "#{index}. #{currency.code}"
-            #binding.pry
+            
         end
         select_currencies
     end
@@ -62,13 +58,13 @@ class CLI
            
         end
 
-        #puts "input y to see a list or exit to leave"
+        
         currency_details(currency)
-        #puts "urrency rate"
+        
         
     end
     def currency_details(currency)
-        #binding.pry
+        
         
         if currency.class == Currency
             
