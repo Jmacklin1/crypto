@@ -1,9 +1,6 @@
 # Crypto
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/crypto`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
+Welcome to Crypto ClI! This CLI will give you the ability to check the price of Bitcoin for multiple currencies. Once prompted you be able to choose which currency you wish to view the current rate for BitCoin. After entering the Name of the currency you beable to see the currency name, the discription and the current rate of Bitcoin. Fianlly, you can return to the selection menu or exit the CLI. 
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -19,10 +16,16 @@ And then execute:
 Or install it yourself as:
 
     $ gem install crypto
+    to run the program bin/run
 
 ## Usage
 
-TODO: Write usage instructions here
+To start execute bin/run 
+After the welcome message, you will be asked to enter your name.
+The program will then ask if you would like to check the price of Bitcoin. You will be prompted to select continue or exit.
+Continuing- you will be prompted to select the currency you would like to know the exchange rate for.
+The Currency Name, Description, and exchance rate will be displayed.
+The program will then ask if you would like to check the price of Bitcoin. You will be prompted to select continue or exit.
 
 ## Development
 

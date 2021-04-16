@@ -1,3 +1,5 @@
 what to do?
 User should be able to select from a list of currencies
 User should be able to see the current price of bitcoin for selected curreecy 
+If a user choose an unknow seleciton the user should be prompted to the main menu
+User should be able to exit the CLI
